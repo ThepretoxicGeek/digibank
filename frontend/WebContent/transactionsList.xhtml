@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Digibank</title>
+</h:head>
+<h:body>
+	<h2>Transactions</h2>
+	<h:form>
+		<p:dataTable value="#{digibankcontroller.transactionsList}" var="digibank">
+			<p:column headerText="TransactionCode">
+				<h:outputText value="#{digibank.transactionCode}" />
+			</p:column>
+			<p:column headerText="Name">
+				<h:outputText value="#{digibank.name}" />
+			</p:column>
+			<p:column headerText="SourcePassport">
+				<h:outputText value="#{digibank.sourcePassport}" />
+			</p:column>
+			<p:column headerText="DestinationPassport">
+				<h:outputText value="#{digibank.destinationPassport}" />
+			</p:column>
+			<p:column headerText="DestinationCountry">
+				<h:outputText value="#{digibank.destinationCountry}" />
+			</p:column>
+			
+			<p:column headerText="DestinationBank">
+				<h:outputText value="#{digibank.destinationBank}" />
+			</p:column>
+			<p:column headerText="AccountNumber">
+				<h:outputText value="#{digibank.accountNumber}" />
+			</p:column>
+			<p:column headerText="Amount">
+				<h:outputText value="#{digibank.amount}" />
+			</p:column>
+		</p:dataTable>
+	</h:form>
+</h:body>
+</html>
